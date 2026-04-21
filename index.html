@@ -40,9 +40,17 @@
     </header>
 
     <main>
-        <div class="conteiner">
+            <section class="hero-container">
+        <div class="carousel">
+            <div class="carousel-item" style="background-image: url('https://ecommerceapi.assistcard.com/Api/ImagesHandler/GetImage?freeImageCode=boliviauy1');"></div>
+            <div class="carousel-item" style="background-image: url('https://unifranz.edu.bo/wp-content/uploads/2024/01/pink-flamingoes-in-bolivia-2021-08-26-22-29-43-utc-medium-1250-834.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('imagen3.jpg');"></div>
+        </div>
+        <div class="hero-content">
             <h1>Bienvenido al Blog de Viajes más grande de <span>Bolivia</span></h1>
         </div>
+        </section>
+
     </main>
 
     <footer class="footer-sitio">
@@ -50,6 +58,7 @@
     </footer>
 
     <script>
+        // hace que el value funcione como un enlace a la página correspondiente
         function redirectTo(url) {
             if (url) {
                 window.location.href = url;

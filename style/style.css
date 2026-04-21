@@ -7,7 +7,7 @@
     --color-texto: #333333;
     --sidebar-width: 250px;
 }
-
+/* estilos de titulos generales */
 h1,
 h2,
 h3 {
@@ -16,7 +16,7 @@ h3 {
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+/* estilos de los selec */
 select {
     padding: 8px 12px;
     border-radius: 3px;
@@ -28,7 +28,7 @@ select {
     min-width: 200px;
     cursor: pointer;
 }
-
+/* estilos del menu */
 li {
     list-style: none;
     padding: 20px;
@@ -103,7 +103,7 @@ label:hover {
     color: var(--color-secundario);
     background-color: var(--color-acento);
 }
-
+/* contenedor de sitios */
 .conteiner {
     max-width: 1200px;
     margin: auto;
@@ -112,6 +112,50 @@ label:hover {
     gap: 20px;
     flex-direction: row;
 }
+    /* hero */
+    .hero-container {
+    position: relative;
+    height: 100vh; /* Altura total de la pantalla */
+    width: 100%;
+    overflow: hidden; /* Oculta las imágenes fuera del área */
+    }
+
+    .carousel {
+    display: flex;
+    width: 300%; /* 100% por cada imagen (ej. 3 imágenes = 300%) */
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: slideAnimation 15s infinite; /* Tiempo total del carrusel */
+    }
+
+    .carousel-item {
+    width: 100%; /* Cada imagen ocupa el 100% del contenedor */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    }
+
+    /* Animación: Mueve el carrusel a la izquierda */
+    @keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(0); } /* Pausa en la img 1 */
+    30% { transform: translateX(-33.33%); } /* Mueve a img 2 */
+    55% { transform: translateX(-33.33%); } /* Pausa en la img 2 */
+    60% { transform: translateX(-66.66%); } /* Mueve a img 3 */
+    90% { transform: translateX(-66.66%); } /* Pausa en la img 3 */
+    100% { transform: translateX(0); } /* Vuelve a img 1 */
+    }
+
+    .hero-content {
+    position: relative;
+    z-index: 10;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    }
 
 .site-header {
     width: 100%;
